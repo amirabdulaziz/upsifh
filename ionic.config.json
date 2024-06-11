@@ -1,0 +1,7 @@
+{
+  "name": "upsifh",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

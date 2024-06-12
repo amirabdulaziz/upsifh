@@ -9,9 +9,13 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import "./Home.css";
+// import MainPage from "../component/MainPage";
+
 import FitnesHome from "../assets/homeimg/fitneshome.svg";
 
 const Home: React.FC = () => {
+  const history = useHistory();
+
   return (
     <IonPage>
       <IonHeader className="ion-no-border">
@@ -28,10 +32,11 @@ const Home: React.FC = () => {
           </div>
           <div className="w-full absolute bottom-4 px-4">
             <button
-              className="bg-[#D4C685] rounded-lg shadow-md px-2 py-2 h-auto w-full"
+              onClick={() => history.push("/profile")}
+              className="bg-[#D4C685] rounded-lg shadow-md px-2 py-2 h-10 w-full"
             >
               <IonText className="text-white">
-                <p>Get started now</p>
+                <p className="lowercase">Get started now</p>
               </IonText>
             </button>
           </div>
@@ -42,3 +47,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+import { useHistory } from "react-router-dom";

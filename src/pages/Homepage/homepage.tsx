@@ -158,7 +158,7 @@ const homepage: React.FC = () => {
                 <IonCol size="6" key={group.id}>
                   <div className="flex flex-col items-center text-center">
                     <IonCard
-                      onClick={() => history.push(`/muscle-group/${group.id}`)}
+                      // onClick={() => history.push(`/muscle-group/${group.id}`)}
                       className="relative w-full h-[100px] overflow-hidden"
                     >
                       <IonImg

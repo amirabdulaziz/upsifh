@@ -7,6 +7,7 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import "./Home.css";
+import { useHistory } from "react-router-dom";
 // import MainPage from "../component/MainPage";
 
 import FitnesHome from "../assets/homeimg/fitneshome.svg";
@@ -42,4 +43,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-import { useHistory } from "react-router-dom";
+

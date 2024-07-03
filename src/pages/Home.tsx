@@ -1,11 +1,9 @@
 import {
-  IonButton,
   IonContent,
   IonHeader,
   IonImg,
   IonPage,
   IonText,
-  IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import "./Home.css";
@@ -18,10 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader className="ion-no-border">
-        <IonToolbar>{/* Toolbar content (if any) */}</IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
+      <IonContent>
         <div className="flex flex-col justify-center items-center h-full relative">
           <div className="flex flex-col justify-center items-center">
             <IonImg src={FitnesHome} className="mb-4 h-[240px] w-[240px]" />
@@ -36,7 +31,7 @@ const Home: React.FC = () => {
               className="bg-[#D4C685] rounded-lg shadow-md px-2 py-2 h-10 w-full"
             >
               <IonText className="text-white">
-                <p className="lowercase">Get started now</p>
+                <p className="lowercase ">Get started now</p>
               </IonText>
             </button>
           </div>

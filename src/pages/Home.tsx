@@ -27,7 +27,7 @@ const Home: React.FC = () => {
           </div>
           <div className="w-full absolute bottom-4 px-4">
             <button
-              onClick={() => history.push("/profile")}
+              onClick={() => history.push("/homepage")}
               className="bg-[#D4C685] rounded-lg shadow-md px-2 py-2 h-10 w-full"
             >
               <IonText className="text-white">

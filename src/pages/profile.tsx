@@ -1,14 +1,24 @@
-import { IonContent, IonHeader, IonPage } from '@ionic/react'
+import { IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonText, IonToolbar } from '@ionic/react'
 import React from 'react'
 
 const profile = () => {
   return (
     <IonPage>
-      <IonHeader></IonHeader>
+      <IonHeader>
+        <IonToolbar className='ion-no-border '>
+
+        </IonToolbar>
+      </IonHeader>
       <IonContent>
-        <div>
-          <h2>Hello this is 9 ringgit</h2>
-        </div>
+        <IonGrid>
+          <IonCol>
+            <IonRow>
+              <IonText>
+                <h1 className='text-dark'>Profile</h1>
+              </IonText>
+            </IonRow>
+          </IonCol>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );

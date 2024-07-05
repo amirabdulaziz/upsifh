@@ -20,7 +20,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Pagination } from "swiper/modules";
 
-import exercises, { Exercise, MuscleGroup } from "./dumbbel"; // Corrected import and interface
+import exercises, { Exercise, MuscleGroup } from "./dumbbel"; 
 
 const Homepage: React.FC = () => {
   const history = useHistory();
@@ -101,7 +101,7 @@ const Homepage: React.FC = () => {
                 loop={false}
                 pagination={{ clickable: false }}
               >
-                {barbellExercises.map((exercise, index) => (
+                {barbellExercises.slice(0, 4).map((exercise, index) => (
                   <SwiperSlide key={index}>
                     <IonImg
                       src={
@@ -144,7 +144,7 @@ const Homepage: React.FC = () => {
                 loop={false}
                 pagination={{ clickable: false }}
               >
-                {dumbbellExercises.map((exercise, index) => (
+                {dumbbellExercises.slice(0, 4).map((exercise, index) => (
                   <SwiperSlide key={index}>
                     <IonImg
                       src={

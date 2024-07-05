@@ -27,20 +27,19 @@ const Tabbar: React.FC = () => {
 
   return (
     <IonTabBar slot="bottom">
-        
-      <IonTabButton onClick={() => history.push("/homepage")}>
+      <IonTabButton tab="home" onClick={() => history.push("/homepage")}>
         <IonIcon icon={homeOutline} />
         <IonText>
           <p className="text-xs">Homepage</p>
         </IonText>
       </IonTabButton>
-      <IonTabButton onClick={() => history.push("/feedback")}>
+      <IonTabButton tab="feedback" onClick={() => history.push("/feedback")}>
         <IonIcon icon={journalOutline} />
         <IonText>
           <p className="text-xs">Feedback</p>
         </IonText>
       </IonTabButton>
-      <IonTabButton onClick={() => history.push("/bmi")}>
+      <IonTabButton tab="bmi" onClick={() => history.push("/bmi")}>
         <IonIcon icon={calculatorOutline} />
         <IonText>
           <p className="text-xs">BMI</p>

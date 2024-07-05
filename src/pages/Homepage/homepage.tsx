@@ -72,8 +72,8 @@ const homepage: React.FC = () => {
               <Swiper
                 slidesPerView={1.2}
                 spaceBetween={10}
-                loop={true}
-                pagination={{ clickable: true }}
+                loop={false}
+                pagination={{ clickable: false }}
               >
                 {barbell.map((exercise) => (
                   <SwiperSlide key={exercise.id}>
@@ -115,8 +115,8 @@ const homepage: React.FC = () => {
               <Swiper
                 slidesPerView={1.2}
                 spaceBetween={10}
-                loop={true}
-                pagination={{ clickable: true }}
+                loop={false}
+                pagination={{ clickable: false }}
               >
                 {barbell.map((exercise) => (
                   <SwiperSlide key={exercise.id}>

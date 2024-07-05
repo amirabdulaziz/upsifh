@@ -1,0 +1,29 @@
+.bmi-result {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .calculate-button {
+    margin-top: 20px;
+  }
+  
+  .bmi-result h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+
+  .input-box {
+    --inner-box-shadow: none;
+    --box-shadow: none;
+    --highlight-color-focused: none;
+    --background: rgb(116, 109, 109);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .bmi-result h3 {
+    font-size: 1.2em;
+    color: var(--ion-color-medium);
+  }
+  

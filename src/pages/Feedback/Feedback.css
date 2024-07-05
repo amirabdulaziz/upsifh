@@ -1,0 +1,28 @@
+.feedback-form {
+    padding: 30px;
+  }
+  
+  .input-box {
+    --inner-box-shadow: none;
+    --box-shadow: none;
+    --highlight-color-focused: none;
+    --background: rgb(116, 109, 109);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .input-text {
+    --inner-box-shadow: none;
+    --box-shadow: none;
+    --highlight-color-focused: none;
+    --background: rgb(116, 109, 109);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    height: 150px;
+  }
+  .input-box ion-input, .input-box ion-textarea {
+    border: none;
+    box-shadow: none;
+  }
+  

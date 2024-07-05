@@ -1,11 +1,8 @@
+import React from "react";
 import {
   IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
   IonCol,
   IonContent,
-  IonFooter,
   IonGrid,
   IonHeader,
   IonIcon,
@@ -15,19 +12,56 @@ import {
   IonText,
   IonToolbar,
 } from "@ionic/react";
-import React from "react";
-import { menuOutline, chevronForwardCircleOutline, chevronForwardOutline } from "ionicons/icons";
+import { menuOutline, chevronForwardOutline } from "ionicons/icons";
 import Tabbar from "../../component/Tabbar";
 import Sidebar from "../../component/Sidebar";
 import { useHistory } from "react-router-dom";
-import muscleGroups from "./muscleGroups";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Pagination } from "swiper/modules";
-import barbell from "./Barbel";
 
-const homepage: React.FC = () => {
+import exercises, { Exercise, MuscleGroup } from "./dumbbel"; // Corrected import and interface
+
+const Homepage: React.FC = () => {
   const history = useHistory();
+
+  // Extracting muscle group names and their corresponding images
+  const muscleGroups = Object.keys(exercises).map((key) => ({
+    name: key.charAt(0).toUpperCase() + key.slice(1),
+    imageUrl: exercises[key as keyof typeof exercises].image,
+  }));
+
+  // Filter exercises based on equipment type
+  const barbellExercises: Exercise[] = [];
+  const dumbbellExercises: Exercise[] = [];
+
+  Object.values(exercises).forEach((group) => {
+    group.exercises.forEach((exercise) => {
+      if (exercise.equipment.includes("barbell")) {
+        barbellExercises.push({
+          name: exercise.name,
+          imageUrl:
+            typeof exercise.imageUrl === "string"
+              ? exercise.imageUrl
+              : exercise.imageUrl?.barbell || "", // Ensure imageUrl is defined
+          equipment: exercise.equipment,
+          description: exercise.description || "", // Provide a default value for description
+        });
+      }
+      if (exercise.equipment.includes("dumbbell")) {
+        dumbbellExercises.push({
+          name: exercise.name,
+          imageUrl:
+            typeof exercise.imageUrl === "string"
+              ? exercise.imageUrl
+              : exercise.imageUrl?.dumbbell || "", // Ensure imageUrl is defined
+          equipment: exercise.equipment,
+          description: exercise.description || "", // Provide a default value for description
+        });
+      }
+    });
+  });
+
   return (
     <>
       <Sidebar />
@@ -38,7 +72,6 @@ const homepage: React.FC = () => {
             <div className="flex flex-cols justify-between items-center">
               <IonRow>Welcome</IonRow>
               <IonRow>
-                {/* <IonIcon src={menuOutline} className="w-6 h-6" /> */}
                 <IonIcon
                   icon={menuOutline}
                   className="h-10 w-6"
@@ -55,13 +88,6 @@ const homepage: React.FC = () => {
         </IonHeader>
         <IonContent>
           <IonGrid>
-            <IonCol>
-              <IonText>
-                <h1 className="text-dark text-center">
-                  WELCOME TO UPSI FH: FITNESS HELPER
-                </h1>
-              </IonText>
-            </IonCol>
             <IonRow>
               <IonCol size="10">
                 <h1 className="text-dark text-sm">Barbell</h1>
@@ -75,29 +101,29 @@ const homepage: React.FC = () => {
                 loop={false}
                 pagination={{ clickable: false }}
               >
-                {barbell.map((exercise) => (
-                  <SwiperSlide key={exercise.id}>
+                {barbellExercises.map((exercise, index) => (
+                  <SwiperSlide key={index}>
                     <IonImg
-                      src={exercise.imageUrl}
-                      className="w-full h-40 object-cover rounded"
+                      src={
+                        typeof exercise.imageUrl === "string"
+                          ? exercise.imageUrl
+                          : ""
+                      }
+                      className="w-full h-40 object-cover rounded filter brightness-50"
                     />
                     <div className="absolute bottom-2 left-2 flex flex-col items-start text-left">
-                      {" "}
                       <IonText className="text-white text-lg">
                         {exercise.name}
                       </IonText>
                       <IonText
-                        onClick={(e) => {
-                          e.preventDefault();
-                          history.push("/");
-                        }}
+                        onClick={() => history.push("/")}
                         className="flex items-center text-tertiary py-1 text-xs mt-2"
                       >
                         <p className="mr-1">View Details</p>
                         <IonIcon
                           icon={chevronForwardOutline}
                           style={{ color: "#ffffff" }}
-                          className="h-4 w-4 "
+                          className="h-4 w-4"
                         />
                       </IonText>
                     </div>
@@ -107,7 +133,7 @@ const homepage: React.FC = () => {
             </IonRow>
             <IonRow>
               <IonCol size="10">
-                <h1 className="text-dark text-sm">Dumbell</h1>
+                <h1 className="text-dark text-sm">Dumbbell</h1>
               </IonCol>
               <IonCol size="2">
                 <h1 className="text-dark text-xs">View More</h1>
@@ -118,29 +144,29 @@ const homepage: React.FC = () => {
                 loop={false}
                 pagination={{ clickable: false }}
               >
-                {barbell.map((exercise) => (
-                  <SwiperSlide key={exercise.id}>
+                {dumbbellExercises.map((exercise, index) => (
+                  <SwiperSlide key={index}>
                     <IonImg
-                      src={exercise.imageUrl}
-                      className="w-full h-40 object-cover rounded"
+                      src={
+                        typeof exercise.imageUrl === "string"
+                          ? exercise.imageUrl
+                          : ""
+                      }
+                      className="w-full h-40 object-cover rounded filter brightness-50"
                     />
                     <div className="absolute bottom-2 left-2 flex flex-col items-start text-left">
-                      {" "}
                       <IonText className="text-white text-lg">
                         {exercise.name}
                       </IonText>
                       <IonText
-                        onClick={(e) => {
-                          e.preventDefault();
-                          history.push("/");
-                        }}
+                        onClick={() => history.push("/")}
                         className="flex items-center text-tertiary py-1 text-xs mt-2"
                       >
                         <p className="mr-1">View Details</p>
                         <IonIcon
                           icon={chevronForwardOutline}
                           style={{ color: "#ffffff" }}
-                          className="h-4 w-4 "
+                          className="h-4 w-4"
                         />
                       </IonText>
                     </div>
@@ -152,17 +178,18 @@ const homepage: React.FC = () => {
               <IonCol size="10">
                 <h1 className="text-dark text-sm">Body parts</h1>
               </IonCol>
-            </IonRow>{" "}
+            </IonRow>
             <IonRow>
-              {muscleGroups.map((group) => (
-                <IonCol size="6" key={group.id}>
+              {muscleGroups.map((group, index) => (
+                <IonCol size="6" key={index}>
                   <div className="flex flex-col items-center text-center">
-                    <IonCard
-                      // onClick={() => history.push(`/muscle-group/${group.id}`)}
-                      className="relative w-full h-[100px] overflow-hidden"
-                    >
+                    <IonCard className="relative w-full h-[100px] overflow-hidden">
                       <IonImg
-                        src={group.imageUrl}
+                        src={
+                          typeof group.imageUrl === "string"
+                            ? group.imageUrl
+                            : ""
+                        }
                         alt={group.name}
                         className="absolute inset-0 w-full h-full object-cover filter brightness-50"
                       />
@@ -184,4 +211,4 @@ const homepage: React.FC = () => {
   );
 };
 
-export default homepage;
+export default Homepage;

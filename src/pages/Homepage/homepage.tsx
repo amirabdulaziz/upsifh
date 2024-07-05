@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   IonCard,
   IonCol,
@@ -19,11 +19,11 @@ import { useHistory } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Pagination } from "swiper/modules";
-
-import exercises, { Exercise, MuscleGroup } from "./dumbbel"; 
+import exercises, { Exercise, MuscleGroup } from "./dumbbel";
 
 const Homepage: React.FC = () => {
   const history = useHistory();
+  const [userName, setUserName] = useState<string | null>("");
 
   // Extracting muscle group names and their corresponding images
   const muscleGroups = Object.keys(exercises).map((key) => ({
@@ -62,15 +62,21 @@ const Homepage: React.FC = () => {
     });
   });
 
+  useEffect(() => {
+    const storedName = localStorage.getItem("userName");
+    if (storedName) {
+      setUserName(storedName);
+    }
+  }, []);
+
   return (
     <>
       <Sidebar />
-
       <IonPage id="sidebarmenu">
-        <IonHeader className="ion-no-border shadow-none ">
-          <IonToolbar className="px-2 ">
-            <div className="flex flex-cols justify-between items-center">
-              <IonRow>Welcome</IonRow>
+        <IonHeader className="ion-no-border shadow-none">
+          <IonToolbar color="bg-primary" className="pt-8 text-primary">
+            <div className="flex flex-cols justify-between items-center px-2">
+              <IonRow>Welcome, {userName}</IonRow>
               <IonRow>
                 <IonIcon
                   icon={menuOutline}
@@ -89,11 +95,11 @@ const Homepage: React.FC = () => {
         <IonContent>
           <IonGrid>
             <IonRow>
-              <IonCol size="10">
+              <IonCol size="9">
                 <h1 className="text-dark text-sm">Barbell</h1>
               </IonCol>
-              <IonCol size="2">
-                <h1 className="text-dark text-xs">View More</h1>
+              <IonCol size="3">
+                <h1 className="text-dark text-right text-xs">View More</h1>
               </IonCol>
               <Swiper
                 slidesPerView={1.2}
@@ -132,11 +138,11 @@ const Homepage: React.FC = () => {
               </Swiper>
             </IonRow>
             <IonRow>
-              <IonCol size="10">
+              <IonCol size="9">
                 <h1 className="text-dark text-sm">Dumbbell</h1>
               </IonCol>
-              <IonCol size="2">
-                <h1 className="text-dark text-xs">View More</h1>
+              <IonCol size="3">
+                <h1 className="text-dark text-right text-xs">View More</h1>
               </IonCol>
               <Swiper
                 slidesPerView={1.2}
@@ -175,9 +181,7 @@ const Homepage: React.FC = () => {
               </Swiper>
             </IonRow>
             <IonRow>
-              <IonCol size="10">
-                <h1 className="text-dark text-sm">Body parts</h1>
-              </IonCol>
+              <h1 className="text-dark text-sm mt-2">Body parts</h1>
             </IonRow>
             <IonRow>
               {muscleGroups.map((group, index) => (

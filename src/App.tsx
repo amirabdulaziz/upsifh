@@ -6,6 +6,8 @@ import Profile from "./pages/profile";
 import Homepage from "./pages/Homepage/homepage";
 import Feedback from "./pages/Feedback/Feedback";
 import Bmi from "./pages/BMI/Bmi";
+import AdminLogin from "./pages/Admin/AdminLogin";
+import AddUser from "./pages/Homepage/AddUser";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -35,7 +37,7 @@ import "@ionic/react/css/palettes/dark.system.css";
 
 /* Theme variables */
 import "./theme/tailwind.css";
-import "./theme/variables.css";
+// import "./theme/variables.css";
 
 setupIonicReact();
 
@@ -45,6 +47,9 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route exact path="/home">
           <Home />
+        </Route>
+        <Route exact path="/adduser">
+          <AddUser />
         </Route>
         <Route exact path="/profile">
           <Profile />
@@ -60,6 +65,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/bmi">
           <Bmi />
+        </Route>
+        <Route exact path="/adminlogin">
+          <AdminLogin />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

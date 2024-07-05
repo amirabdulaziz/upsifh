@@ -31,6 +31,7 @@
     "react-dom": "^18.2.0",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4",
+    "semantic-ui-react": "^2.1.5",
     "swiper": "^11.1.4"
   },
   "devDependencies": {

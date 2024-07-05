@@ -99,7 +99,12 @@ const Homepage: React.FC = () => {
                 <h1 className="text-dark text-sm">Barbell</h1>
               </IonCol>
               <IonCol size="3">
-                <h1 className="text-dark text-right text-xs">View More</h1>
+                <h1
+                  onClick={() => history.push("/barbelllist")}
+                  className="text-secondary text-right text-xs"
+                >
+                  View More
+                </h1>
               </IonCol>
               <Swiper
                 slidesPerView={1.2}
@@ -142,7 +147,12 @@ const Homepage: React.FC = () => {
                 <h1 className="text-dark text-sm">Dumbbell</h1>
               </IonCol>
               <IonCol size="3">
-                <h1 className="text-dark text-right text-xs">View More</h1>
+                <h1
+                  onClick={() => history.push("/dumbellList")}
+                  className="text-secondary text-right text-xs"
+                >
+                  View More
+                </h1>
               </IonCol>
               <Swiper
                 slidesPerView={1.2}
@@ -181,7 +191,7 @@ const Homepage: React.FC = () => {
               </Swiper>
             </IonRow>
             <IonRow>
-              <h1 className="text-dark text-sm mt-2">Body parts</h1>
+              <h1 className="text-dark text-sm mt-2 px-2">Body parts</h1>
             </IonRow>
             <IonRow>
               {muscleGroups.map((group, index) => (

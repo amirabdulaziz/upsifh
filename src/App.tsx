@@ -8,6 +8,8 @@ import Feedback from "./pages/Feedback/Feedback";
 import Bmi from "./pages/BMI/Bmi";
 import AdminLogin from "./pages/Admin/AdminLogin";
 import AddUser from "./pages/Homepage/AddUser";
+import BarbellList from "./pages/Homepage/BarbellList";
+import DumbellList from "./pages/Homepage/DumbellList";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -59,6 +61,12 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/homepage">
           <Homepage />
+        </Route>
+        <Route exact path="/barbelllist">
+          <BarbellList />
+        </Route>
+        <Route exact path="/dumbellList">
+          <DumbellList />
         </Route>
         <Route exact path="/feedback">
           <Feedback />

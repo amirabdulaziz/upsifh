@@ -43,8 +43,8 @@ const Bmi = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
+      <IonHeader >
+        <IonToolbar >
           <IonTitle>BMI Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>

@@ -197,19 +197,21 @@ const Homepage: React.FC = () => {
               {muscleGroups.map((group, index) => (
                 <IonCol size="6" key={index}>
                   <div className="flex flex-col items-center text-center">
-                    <IonCard className="relative w-full h-[100px] overflow-hidden">
+                    <IonCard
+                      className="relative w-full h-[100px] overflow-hidden"
+                      onClick={() =>
+                        history.push(`/musclegroup/${group.name.toLowerCase()}`)
+                      }
+                    >
                       <IonImg
-                        src={
-                          typeof group.imageUrl === "string"
-                            ? group.imageUrl
-                            : ""
-                        }
+                        src={group.imageUrl}
                         alt={group.name}
                         className="absolute inset-0 w-full h-full object-cover filter brightness-50"
                       />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <IonText className="text-white text-sm font-bold">
-                          {group.name}
+                          {group.name.charAt(0).toUpperCase() +
+                            group.name.slice(1)}
                         </IonText>
                       </div>
                     </IonCard>

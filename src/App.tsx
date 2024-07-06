@@ -10,6 +10,8 @@ import AdminLogin from "./pages/Admin/AdminLogin";
 import AddUser from "./pages/Homepage/AddUser";
 import BarbellList from "./pages/Homepage/BarbellList";
 import DumbellList from "./pages/Homepage/DumbellList";
+import Musclegroup from "./pages/Homepage/muscle-group";
+import BarDumbSelection from "./pages/Homepage/bardumbselection";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -61,6 +63,12 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/homepage">
           <Homepage />
+        </Route>
+        <Route exact path="/musclegroup/:group">
+          <Musclegroup />
+        </Route>
+        <Route exact path="/bardumbselection/:group/:exerciseName">
+          <BarDumbSelection />
         </Route>
         <Route exact path="/barbelllist">
           <BarbellList />

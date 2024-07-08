@@ -13,7 +13,9 @@ import { getStorage } from "firebase/storage";
 
 // Initialize Firebase
 const app = initializeApp(getFirebaseConfig());
-export const db = getFirestore();
+
+// Initialize services
+export const db = getFirestore(app);
 export const auth = getAuth(app);
 const storage = getStorage(app);
 

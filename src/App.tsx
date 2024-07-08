@@ -64,12 +64,16 @@ const App: React.FC = () => (
         <Route exact path="/homepage">
           <Homepage />
         </Route>
-        <Route exact path="/musclegroup/:group">
+        <Route exact path="/musclegroup/:group/:equipment">
           <Musclegroup />
         </Route>
-        <Route exact path="/bardumbselection/:group/:exerciseName">
+
+        <Route exact path="/bardumbselection/:group">
           <BarDumbSelection />
         </Route>
+        {/* <Route exact path="/bardumbselection/:group/:exerciseName">
+          <BarDumbSelection />
+        </Route> */}
         <Route exact path="/barbelllist">
           <BarbellList />
         </Route>

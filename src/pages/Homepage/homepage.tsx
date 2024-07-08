@@ -200,7 +200,9 @@ const Homepage: React.FC = () => {
                     <IonCard
                       className="relative w-full h-[100px] overflow-hidden"
                       onClick={() =>
-                        history.push(`/musclegroup/${group.name.toLowerCase()}`)
+                        history.push(
+                          `/bardumbselection/${group.name.toLowerCase()}`
+                        )
                       }
                     >
                       <IonImg

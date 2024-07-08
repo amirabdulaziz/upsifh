@@ -1,4 +1,4 @@
-import { Redirect, Route } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
@@ -12,6 +12,7 @@ import BarbellList from "./pages/Homepage/BarbellList";
 import DumbellList from "./pages/Homepage/DumbellList";
 import Musclegroup from "./pages/Homepage/muscle-group";
 import BarDumbSelection from "./pages/Homepage/bardumbselection";
+import Dashboard from "./pages/Admin/Dashboard";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -28,69 +29,69 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
 
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
 import "@ionic/react/css/palettes/dark.system.css";
 
 /* Theme variables */
 import "./theme/tailwind.css";
+import { AuthProvider } from "./Auth/admin-auth";
 // import "./theme/variables.css";
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/adduser">
-          <AddUser />
-        </Route>
-        <Route exact path="/profile">
-          <Profile />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-        <Route exact path="/homepage">
-          <Homepage />
-        </Route>
-        <Route exact path="/musclegroup/:group/:equipment">
-          <Musclegroup />
-        </Route>
+    <AuthProvider>
+      {" "}
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/adduser">
+            <AddUser />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route exact path="/homepage">
+            <Homepage />
+          </Route>
+          <Route exact path="/musclegroup/:group/:equipment">
+            <Musclegroup />
+          </Route>
 
-        <Route exact path="/bardumbselection/:group">
-          <BarDumbSelection />
-        </Route>
-        {/* <Route exact path="/bardumbselection/:group/:exerciseName">
+          <Route exact path="/bardumbselection/:group">
+            <BarDumbSelection />
+          </Route>
+          {/* <Route exact path="/bardumbselection/:group/:exerciseName">
           <BarDumbSelection />
         </Route> */}
-        <Route exact path="/barbelllist">
-          <BarbellList />
-        </Route>
-        <Route exact path="/dumbellList">
-          <DumbellList />
-        </Route>
-        <Route exact path="/feedback">
-          <Feedback />
-        </Route>
-        <Route exact path="/bmi">
-          <Bmi />
-        </Route>
-        <Route exact path="/adminlogin">
-          <AdminLogin />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
+          <Route exact path="/barbelllist">
+            <BarbellList />
+          </Route>
+          <Route exact path="/dumbellList">
+            <DumbellList />
+          </Route>
+          <Route exact path="/feedback">
+            <Feedback />
+          </Route>
+          <Route exact path="/bmi">
+            <Bmi />
+          </Route>
+
+          <Route exact path="/adminlogin">
+            <AdminLogin />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </AuthProvider>
   </IonApp>
 );
 

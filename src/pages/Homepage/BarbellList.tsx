@@ -1,8 +1,8 @@
+// BarbellExercisesList.tsx
 import React from "react";
-import exercises, { Exercise } from "./dumbbel"; // Assuming you're using Semantic UI React or similar
+import exercises, { Exercise } from "./dumbbel"; // Adjust the import path based on your project structure
 import {
   IonCard,
-  IonCol,
   IonContent,
   IonHeader,
   IonIcon,
@@ -17,6 +17,7 @@ import { useHistory } from "react-router";
 
 const BarbellExercisesList: React.FC = () => {
   const history = useHistory();
+
   // Filter exercises that use barbells
   const barbellExercises: Exercise[] = Object.keys(exercises).flatMap(
     (muscleGroupKey) =>
@@ -24,6 +25,10 @@ const BarbellExercisesList: React.FC = () => {
         (exercise) => exercise.equipment.includes("barbell")
       )
   );
+
+  const handleCardClick = (exerciseName: string) => {
+    history.push(`/exercise/${exerciseName}`);
+  };
 
   return (
     <IonPage>
@@ -40,7 +45,7 @@ const BarbellExercisesList: React.FC = () => {
             <div className="flex flex-row justify-center items-center flex-grow">
               <a>
                 <IonText className="text-lg font-bold">
-                  Barbel Excersizes
+                  Barbell Exercises
                 </IonText>
               </a>
             </div>
@@ -50,7 +55,7 @@ const BarbellExercisesList: React.FC = () => {
       <IonContent>
         <IonRow className="p-2">
           {barbellExercises.map((exercise, index) => (
-            <IonCard key={index} className="shadow-md">
+            <IonCard key={index} className="shadow-md" onClick={() => handleCardClick(exercise.name)}>
               <div>
                 {exercise.imageUrl &&
                   typeof exercise.imageUrl === "object" &&

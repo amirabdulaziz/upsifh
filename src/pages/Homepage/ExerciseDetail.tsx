@@ -1,10 +1,10 @@
-// ExerciseDetail.tsx
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonIcon } from '@ionic/react';
 import { chevronBackOutline } from 'ionicons/icons';
 import exercises from './dumbbel'; // Adjust the import path based on your project structure
 import { useHistory } from 'react-router';
+import parse from 'html-react-parser';
 import './ExerciseDetail.css'; // Import the CSS file for styling
 
 interface ExerciseDetailPageProps extends RouteComponentProps<{ name: string }> {}
@@ -64,9 +64,9 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
             <img src={exercise.imageUrl.dumbbell} alt={exercise.name} />
           )}
           <p>{exercise.description}</p>
-          <p>{exercise.detailedDescription}</p>
+          <div>{parse(exercise.detailedDescription)}</div>
           <div>
-            <h2>Video Tutorial</h2>
+            <h1>Video Tutorial</h1>
             <div className="video-container">
               <iframe
                 src={exercise.videoUrl}

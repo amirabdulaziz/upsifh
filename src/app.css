@@ -1,0 +1,17 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+/* Apply the font to the entire application */
+body, p, ion-text, ion-card-content, h1, h2, h3, h4, h5, h6 {
+   font-family: 'Montserrat', sans-serif;
+}
+.header {
+   font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+   font-family: 'Montserrat', sans-serif;
+}
+
+

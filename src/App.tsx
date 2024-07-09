@@ -13,6 +13,7 @@ import DumbellList from "./pages/Homepage/DumbellList";
 import Musclegroup from "./pages/Homepage/muscle-group";
 import BarDumbSelection from "./pages/Homepage/bardumbselection";
 import Dashboard from "./pages/Admin/Dashboard";
+import FeedbackList from "./pages/Admin/FeedbackList";
 import ExerciseDetail from "./pages/Homepage/ExerciseDetail"; // Adjust the import path based on your project structure
 
 /* Core CSS required for Ionic components to work properly */
@@ -83,6 +84,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route exact path="/feedbacklist">
+            <FeedbackList />
           </Route>
           <Route
             exact

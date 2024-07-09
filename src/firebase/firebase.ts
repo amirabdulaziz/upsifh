@@ -8,7 +8,7 @@ import {
   User,
   signOut,
 } from "firebase/auth";
-import { addDoc, collection, doc, getDocs, getFirestore, orderBy, query, updateDoc } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDocs, getFirestore, orderBy, query, updateDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 // Initialize Firebase
@@ -109,5 +109,21 @@ export const updateFeedbackStatus = async (
       console.error("Unexpected error", error);
     }
     throw error;
+  }
+};
+
+// Function to delete feedback by ID
+export const deleteFeedbackById = async (feedbackId: string): Promise<void> => {
+  try {
+    const feedbackDocRef = doc(db, 'feedback', feedbackId);
+    await deleteDoc(feedbackDocRef);
+    console.log(`Feedback with ID ${feedbackId} deleted successfully.`);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error('Error deleting feedback:', error.message);
+    } else {
+      console.error('Unexpected error', error);
+    }
+    throw new Error('Error deleting feedback');
   }
 };

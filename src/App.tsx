@@ -13,6 +13,8 @@ import DumbellList from "./pages/Homepage/DumbellList";
 import Musclegroup from "./pages/Homepage/muscle-group";
 import BarDumbSelection from "./pages/Homepage/bardumbselection";
 import Dashboard from "./pages/Admin/Dashboard";
+import ExerciseDetail from "./pages/Homepage/ExerciseDetail"; // Adjust the import path based on your project structure
+
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -29,7 +31,6 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
-
 import "@ionic/react/css/palettes/dark.system.css";
 
 /* Theme variables */
@@ -42,7 +43,6 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <AuthProvider>
-      {" "}
       <IonReactRouter>
         <IonRouterOutlet>
           <Route exact path="/home">
@@ -63,13 +63,9 @@ const App: React.FC = () => (
           <Route exact path="/musclegroup/:group/:equipment">
             <Musclegroup />
           </Route>
-
           <Route exact path="/bardumbselection/:group">
             <BarDumbSelection />
           </Route>
-          {/* <Route exact path="/bardumbselection/:group/:exerciseName">
-          <BarDumbSelection />
-        </Route> */}
           <Route exact path="/barbelllist">
             <BarbellList />
           </Route>
@@ -82,13 +78,17 @@ const App: React.FC = () => (
           <Route exact path="/bmi">
             <Bmi />
           </Route>
-
           <Route exact path="/adminlogin">
             <AdminLogin />
           </Route>
           <Route exact path="/dashboard">
             <Dashboard />
           </Route>
+          <Route
+            exact
+            path="/exercise/:name"
+            render={(props) => <ExerciseDetail {...props} />}
+          />
         </IonRouterOutlet>
       </IonReactRouter>
     </AuthProvider>

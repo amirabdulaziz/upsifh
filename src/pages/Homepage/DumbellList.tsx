@@ -1,15 +1,6 @@
+// DumbellList.tsx
 import React from "react";
-import {
-  IonCard,
-  IonContent,
-  IonHeader,
-  IonIcon,
-  IonImg,
-  IonPage,
-  IonRow,
-  IonText,
-  IonToolbar,
-} from "@ionic/react";
+import { IonCard, IonContent, IonHeader, IonIcon, IonImg, IonPage, IonRow, IonText, IonToolbar } from "@ionic/react";
 import { chevronBackOutline } from "ionicons/icons";
 import { useHistory } from "react-router";
 import exercises, { Exercise } from "./dumbbel";
@@ -24,6 +15,10 @@ const DumbellList: React.FC = () => {
         (exercise) => exercise.equipment.includes("dumbbell")
       )
   );
+
+  const handleCardClick = (exerciseName: string) => {
+    history.push(`/exercise/${exerciseName}`);
+  };
 
   return (
     <IonPage>
@@ -50,7 +45,7 @@ const DumbellList: React.FC = () => {
       <IonContent>
         <IonRow className="p-2">
           {dumbbellExercises.map((exercise, index) => (
-            <IonCard key={index} className="shadow-md">
+            <IonCard key={index} className="shadow-md" onClick={() => handleCardClick(exercise.name)}>
               <div>
                 {exercise.imageUrl &&
                   typeof exercise.imageUrl === "object" &&

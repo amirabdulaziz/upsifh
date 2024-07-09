@@ -46,6 +46,9 @@ const Homepage: React.FC = () => {
               : exercise.imageUrl?.barbell || "", // Ensure imageUrl is defined
           equipment: exercise.equipment,
           description: exercise.description || "", // Provide a default value for description
+          detailedDescription: exercise.detailedDescription || "", // Provide a default value for detailedDescription
+          videoUrl: exercise.videoUrl || "", // Provide a default value for videoUrl
+          anatomyImage: exercise.anatomyImage || "", // Provide a default value for anatomyImage
         });
       }
       if (exercise.equipment.includes("dumbbell")) {
@@ -57,6 +60,9 @@ const Homepage: React.FC = () => {
               : exercise.imageUrl?.dumbbell || "", // Ensure imageUrl is defined
           equipment: exercise.equipment,
           description: exercise.description || "", // Provide a default value for description
+          detailedDescription: exercise.detailedDescription || "", // Provide a default value for detailedDescription
+          videoUrl: exercise.videoUrl || "", // Provide a default value for videoUrl
+          anatomyImage: exercise.anatomyImage || "", // Provide a default value for anatomyImage
         });
       }
     });

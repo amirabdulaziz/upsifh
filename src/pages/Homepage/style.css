@@ -1,0 +1,38 @@
+.equipment-list,
+.steps-list,
+.safety-list,
+.tips-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.equipment-list li::before,
+.steps-list li::before,
+.safety-list li::before,
+.tips-list li::before {
+  content: '• ';
+  color: black; /* Change color as needed */
+  font-weight: bold; /* Adjust weight as needed */
+}
+
+h3, h4 {
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

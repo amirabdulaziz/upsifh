@@ -8,7 +8,7 @@ import {
   User,
   signOut,
 } from "firebase/auth";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, doc, getDocs, getFirestore, orderBy, query, updateDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 // Initialize Firebase
@@ -68,3 +68,46 @@ export const onAuthStateChangedListener = (
   return onAuthStateChanged(auth, callback);
 };
 
+// fetch user feedback
+export const getFeedback = async () => {
+  try {
+    const feedbackRef = collection(db, "feedback");
+    const feedbackQuery = query(feedbackRef, orderBy("createdAt", "desc"));
+    const feedbackSnapshot = await getDocs(feedbackQuery);
+
+    const feedbackList = feedbackSnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    return feedbackList;
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error("Error getting feedback: ", error.message);
+    } else {
+      console.error("Unexpected error", error);
+    }
+    throw error;
+  }
+};
+
+// update feedback status
+export const updateFeedbackStatus = async (
+  feedbackId: string,
+  status: number
+) => {
+  try {
+    const feedbackRef = doc(db, "feedback", feedbackId);
+    await updateDoc(feedbackRef, {
+      status,
+    });
+    console.log("Feedback status updated successfully", status);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error("Error updating feedback status: ", error.message);
+    } else {
+      console.error("Unexpected error", error);
+    }
+    throw error;
+  }
+};

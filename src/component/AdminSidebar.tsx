@@ -36,7 +36,12 @@ const AdminSidebar = () => {
   };
 
   return (
-    <IonMenu contentId="sidebarmenu" side="start" menuId="first" ref={menuRef}>
+    <IonMenu
+      contentId="adminsidebarmenu"
+      side="start"
+      menuId="first"
+      ref={menuRef}
+    >
       <IonContent className="ion-padding flex flex-col h-full">
         <div className="mt-auto">
           <a className="" onClick={handleSignOut}>

@@ -63,7 +63,7 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <AdminSidebar />
-      <IonPage id="sidebarmenu">
+      <IonPage id="adminsidebarmenu">
         <IonHeader>
           <IonHeader className="ion-no-border shadow-none">
             <IonToolbar color="bg-primary" className="pt-8 text-primary">
@@ -94,10 +94,12 @@ const Dashboard: React.FC = () => {
                     <IonRow>
                       <div className="flex justify-between w-full">
                         <IonText>
-                          <p>{feedback.name}</p>
+                          <p className="text-xs font-bold">{feedback.name}</p>
                         </IonText>
                         <IonText>
-                          <p>{getStatusText(feedback.status)}</p>
+                          <p className="text-sm font-md">
+                            {getStatusText(feedback.status)}
+                          </p>
                         </IonText>
                       </div>
                     </IonRow>
@@ -108,8 +110,13 @@ const Dashboard: React.FC = () => {
                     </IonRow>
                   </IonCol>
                   <div className="line-break"></div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center">
+                  <IonCol className="flex justify-between items-center">
+                    <IonRow className="flex items-center">
+                      {/* <div className="flex items-center">
+                        <IonText className="text-xs">Update status</IonText>
+                      </div> */}
+                    </IonRow>
+                    <IonRow>
                       <IonIcon
                         // style={{ color: "#ffffff" }}
                         src={ellipsisHorizontal}
@@ -186,8 +193,8 @@ const Dashboard: React.FC = () => {
                           </IonList>
                         </IonContent>
                       </IonPopover>
-                    </div>
-                  </div>
+                    </IonRow>
+                  </IonCol>
                 </IonCard>
               </IonRow>
             ))}

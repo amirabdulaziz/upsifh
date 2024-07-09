@@ -4,7 +4,6 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonIcon 
 import { chevronBackOutline } from 'ionicons/icons';
 import exercises from './dumbbel'; // Adjust the import path based on your project structure
 import { useHistory } from 'react-router';
-import parse from 'html-react-parser';
 import './ExerciseDetail.css'; // Import the CSS file for styling
 
 interface ExerciseDetailPageProps extends RouteComponentProps<{ name: string }> {}
@@ -64,9 +63,23 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
             <img src={exercise.imageUrl.dumbbell} alt={exercise.name} />
           )}
           <p>{exercise.description}</p>
-          <div>{parse(exercise.detailedDescription)}</div>
+          {exercise.detailedDescription.map((detail, index) => (
+            <div key={index}>
+              <h3>{detail.title}</h3>
+              {detail.sections.map((section, sectionIndex) => (
+                <div key={sectionIndex}>
+                  <h4>{section.subtitle}</h4>
+                  <ul className="steps-list">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ))}
           <div>
-            <h1>Video Tutorial</h1>
+            <h2>Video Tutorial</h2>
             <div className="video-container">
               <iframe
                 src={exercise.videoUrl}

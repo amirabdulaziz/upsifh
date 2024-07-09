@@ -1,4 +1,3 @@
-// ExerciseDetail.tsx
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonIcon } from '@ionic/react';
@@ -64,7 +63,21 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
             <img src={exercise.imageUrl.dumbbell} alt={exercise.name} />
           )}
           <p>{exercise.description}</p>
-          <p>{exercise.detailedDescription}</p>
+          {exercise.detailedDescription.map((detail, index) => (
+            <div key={index}>
+              <h3>{detail.title}</h3>
+              {detail.sections.map((section, sectionIndex) => (
+                <div key={sectionIndex}>
+                  <h4>{section.subtitle}</h4>
+                  <ul className="steps-list">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ))}
           <div>
             <h2>Video Tutorial</h2>
             <div className="video-container">

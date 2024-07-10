@@ -20,7 +20,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Pagination } from "swiper/modules";
 import exercises, { Exercise, MuscleGroup } from "./dumbbel";
-
+import Lottie from "lottie-react";
+import HomepageLottie from "../../assets/LottieFile/homepagelottie.json";
+import HomeImg from "../../assets/homeimg/homepageimg.svg";
 const Homepage: React.FC = () => {
   const history = useHistory();
   const [userName, setUserName] = useState<string | null>("");
@@ -100,9 +102,56 @@ const Homepage: React.FC = () => {
         </IonHeader>
         <IonContent>
           <IonGrid>
+            <IonRow className="bg-[#f6f3e6] py-6  rounded-md border-[1px] border-secondary">
+              <IonCol size="8" className="mt-2">
+                <IonText className="text-2xl font-semibold">
+                  Start Your <br></br> Fitness Journey
+                </IonText>
+              </IonCol>
+              <IonCol size="4">
+                {/* <Lottie animationData={HomepageLottie} className="w-auto" /> */}
+                <IonImg src={HomeImg} className="w-30 h-30" />
+              </IonCol>
+            </IonRow>
             <IonRow>
+              <h1 className="text-dark font-bold text-sm px-2 mt-4">
+                Body parts
+              </h1>
+            </IonRow>
+            <IonRow className="">
+              {muscleGroups.map((group, index) => (
+                <IonCol size="2" key={index} className="">
+                  {" "}
+                  {/* Add margin here */}
+                  <div className="flex flex-col items-center text-center">
+                    <IonCard
+                      className="relative w-[60px] h-[60px] rounded-full overflow-hidden shadow-none"
+                      onClick={() =>
+                        history.push(
+                          `/bardumbselection/${group.name.toLowerCase()}`
+                        )
+                      }
+                    >
+                      <IonImg
+                        src={group.imageUrl}
+                        alt={group.name}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </IonCard>
+                    <div className="text-center">
+                      <IonText className="text-dark text-xs font-bold">
+                        {group.name.charAt(0).toUpperCase() +
+                          group.name.slice(1)}
+                      </IonText>
+                    </div>
+                  </div>
+                </IonCol>
+              ))}
+            </IonRow>
+
+            <IonRow className="mt-4">
               <IonCol size="9">
-                <h1 className="text-dark text-sm">Barbell</h1>
+                <h1 className="text-dark text-sm font-bold">Barbell</h1>
               </IonCol>
               <IonCol size="3">
                 <h1
@@ -119,7 +168,7 @@ const Homepage: React.FC = () => {
                 pagination={{ clickable: false }}
               >
                 {barbellExercises.slice(0, 4).map((exercise, index) => (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} className="rounded-md">
                     <IonImg
                       src={
                         typeof exercise.imageUrl === "string"
@@ -134,9 +183,9 @@ const Homepage: React.FC = () => {
                       </IonText>
                       <IonText
                         onClick={() => history.push("/")}
-                        className="flex items-center text-tertiary py-1 text-xs mt-2"
+                        className="flex items-center text-tertiary pb-1 text-xs mt-2"
                       >
-                        <p className="mr-1">View Details</p>
+                        <p className="mr-1 text-[10px]">View Details</p>
                         <IonIcon
                           icon={chevronForwardOutline}
                           style={{ color: "#ffffff" }}
@@ -148,9 +197,9 @@ const Homepage: React.FC = () => {
                 ))}
               </Swiper>
             </IonRow>
-            <IonRow>
+            <IonRow className="mt-4">
               <IonCol size="9">
-                <h1 className="text-dark text-sm">Dumbbell</h1>
+                <h1 className="text-dark text-sm font-bold">Dumbbell</h1>
               </IonCol>
               <IonCol size="3">
                 <h1
@@ -160,71 +209,35 @@ const Homepage: React.FC = () => {
                   View More
                 </h1>
               </IonCol>
-              <Swiper
-                slidesPerView={1.2}
-                spaceBetween={10}
-                loop={false}
-                pagination={{ clickable: false }}
-              >
-                {dumbbellExercises.slice(0, 4).map((exercise, index) => (
-                  <SwiperSlide key={index}>
-                    <IonImg
-                      src={
-                        typeof exercise.imageUrl === "string"
-                          ? exercise.imageUrl
-                          : ""
-                      }
-                      className="w-full h-40 object-cover rounded filter brightness-50"
-                    />
-                    <div className="absolute bottom-2 left-2 flex flex-col items-start text-left">
-                      <IonText className="text-white text-lg">
-                        {exercise.name}
-                      </IonText>
-                      <IonText
-                        onClick={() => history.push("/")}
-                        className="flex items-center text-tertiary py-1 text-xs mt-2"
-                      >
-                        <p className="mr-1">View Details</p>
-                        <IonIcon
-                          icon={chevronForwardOutline}
-                          style={{ color: "#ffffff" }}
-                          className="h-4 w-4"
-                        />
-                      </IonText>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
             </IonRow>
-            <IonRow>
-              <h1 className="text-dark text-sm mt-2 px-2">Body parts</h1>
-            </IonRow>
-            <IonRow>
-              {muscleGroups.map((group, index) => (
-                <IonCol size="6" key={index}>
-                  <div className="flex flex-col items-center text-center">
-                    <IonCard
-                      className="relative w-full h-[100px] overflow-hidden"
-                      onClick={() =>
-                        history.push(
-                          `/bardumbselection/${group.name.toLowerCase()}`
-                        )
-                      }
+            <IonRow className="">
+              {dumbbellExercises.slice(0, 4).map((exercise, index) => (
+                <IonCard key={index} className="w-full shadow-md relative">
+                  <IonImg
+                    src={
+                      typeof exercise.imageUrl === "string"
+                        ? exercise.imageUrl
+                        : ""
+                    }
+                    className="w-full h-40 object-cover rounded filter brightness-50"
+                  />
+                  <div className="absolute bottom-1 left-2 flex flex-col items-start text-left">
+                    <IonText className="text-white text-lg">
+                      {exercise.name}
+                    </IonText>
+                    <IonText
+                      onClick={() => history.push("/")}
+                      className="flex items-center text-tertiary pb-1 text-xs mt-2"
                     >
-                      <IonImg
-                        src={group.imageUrl}
-                        alt={group.name}
-                        className="absolute inset-0 w-full h-full object-cover filter brightness-50"
+                      <p className="mr-1 text-[10px]">View Details</p>
+                      <IonIcon
+                        icon={chevronForwardOutline}
+                        style={{ color: "#ffffff" }}
+                        className="h-4 w-4"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <IonText className="text-white text-sm font-bold">
-                          {group.name.charAt(0).toUpperCase() +
-                            group.name.slice(1)}
-                        </IonText>
-                      </div>
-                    </IonCard>
+                    </IonText>
                   </div>
-                </IonCol>
+                </IonCard>
               ))}
             </IonRow>
           </IonGrid>

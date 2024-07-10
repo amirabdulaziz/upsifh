@@ -1,45 +1,42 @@
 import React from "react";
-import {
-  IonTabs,
-  IonTabBar,
-  IonTabButton,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonText,
-} from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
+import { IonTabBar, IonTabButton, IonIcon, IonText } from "@ionic/react";
 import { useHistory, useLocation } from "react-router-dom";
-import { Route, Redirect } from "react-router";
-
-import {
-  playCircle,
-  radio,
-  library,
-  search,
-  homeOutline,
-  journalOutline,
-  calculatorOutline
-} from "ionicons/icons";
+import { homeOutline, journalOutline, calculatorOutline } from "ionicons/icons";
 
 const Tabbar: React.FC = () => {
   const history = useHistory();
+  const location = useLocation();
+
+  const getButtonColor = (path: string) =>
+    location.pathname === path ? "#D4C685" : "";
 
   return (
     <IonTabBar slot="bottom">
-      <IonTabButton tab="home" onClick={() => history.push("/homepage")}>
+      <IonTabButton
+        tab="home"
+        onClick={() => history.push("/homepage")}
+        style={{ color: getButtonColor("/homepage") }}
+      >
         <IonIcon icon={homeOutline} />
         <IonText>
           <p className="text-xs">Homepage</p>
         </IonText>
       </IonTabButton>
-      <IonTabButton tab="feedback" onClick={() => history.push("/feedback")}>
+      <IonTabButton
+        tab="feedback"
+        onClick={() => history.push("/feedback")}
+        style={{ color: getButtonColor("/feedback") }}
+      >
         <IonIcon icon={journalOutline} />
         <IonText>
           <p className="text-xs">Feedback</p>
         </IonText>
       </IonTabButton>
-      <IonTabButton tab="bmi" onClick={() => history.push("/bmi")}>
+      <IonTabButton
+        tab="bmi"
+        onClick={() => history.push("/bmi")}
+        style={{ color: getButtonColor("/bmi") }}
+      >
         <IonIcon icon={calculatorOutline} />
         <IonText>
           <p className="text-xs">BMI</p>
@@ -48,4 +45,5 @@ const Tabbar: React.FC = () => {
     </IonTabBar>
   );
 };
+
 export default Tabbar;

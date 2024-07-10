@@ -45,14 +45,14 @@ const DumbellList: React.FC = () => {
       <IonContent>
         <IonRow className="p-2">
           {dumbbellExercises.map((exercise, index) => (
-            <IonCard key={index} className="shadow-md" onClick={() => handleCardClick(exercise.name)}>
+            <IonCard key={index} className="shadow-sm" onClick={() => handleCardClick(exercise.name)}>
               <div>
                 {exercise.imageUrl &&
                   typeof exercise.imageUrl === "object" &&
                   exercise.imageUrl.dumbbell && (
                     <IonImg
                       src={exercise.imageUrl.dumbbell}
-                      className="w-full h-32 object-cover rounded filter brightness-50"
+                      className="w-full h-32 object-cover rounded filter brightness-40"
                     />
                   )}
                 <div className="px-2 py-2 space-y-1">

@@ -37,7 +37,7 @@ const AdminSidebar = () => {
 
   return (
     <IonMenu
-      contentId="adminsidebarmenu"
+      contentId="adminsidebarmenublablabla"
       side="start"
       menuId="first"
       ref={menuRef}

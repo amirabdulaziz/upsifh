@@ -11,7 +11,7 @@ import DumbellDeadlift from "../../assets/dumbelldeadlift.jpg";
 import BarbelBenchPress from "../../assets/barbellbenchpress.webp";
 import BarbelRow from "../../assets/barbellbentoverrow.jpg";
 import InclinePressBarbel from "../../assets/inclinepressbarbel.jpg";
-import InclinePressDumbel from "../../assets/inclinepressdumbel.gif";
+import InclinePressDumbel from "../../assets/dumbelinclinepress.jpg";
 import DeclinePressBarbel from "../../assets/barbelldeclinepress.jpg";
 import DeclinePressDumbel from "../../assets/dumbelldeclinepress.jpg";
 import BarbelLunges from "../../assets/barbelllunges.jpg";
@@ -33,6 +33,7 @@ import BarbelShoulderPress from "../../assets/barbelshoulderpress.jpg";
 import DumbelLateralRaise from "../../assets/dumbellateralwaise.webp";
 import DumbelDeltoidFly from "../../assets/dumbeldeltoidfly.webp";
 import lunges from "../../assets/lunge-muscles.jpg";
+import DumbelDeadlift from "../../assets/dumbeldeadlift.webp"
 
 import './style.css';
 
@@ -74,50 +75,50 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A compound exercise that targets the chest, shoulders, and triceps by pressing a barbell away from the chest while lying on a bench.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
         videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
         anatomyImage: "/path/to/anatomy/chest.jpg",
       },
@@ -130,52 +131,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "An upper chest exercise performed on an incline bench, pressing the weight upwards.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "decline press",
@@ -186,52 +187,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A lower chest exercise performed on a decline bench, pressing the weight away from the chest.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
     ],
     image: Chest,
@@ -243,56 +244,56 @@ const exercises: { [key: string]: MuscleGroup } = {
         equipment: ["barbell", "dumbbell"],
         imageUrl: {
           barbell: BarbelLift,
-          dumbbell: DeclinePressDumbel,
+          dumbbell: DumbelDeadlift,
         },
         description:
           "A full-body exercise focusing on the posterior chain, lifting the weight from the ground to hip level.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "lunges",
@@ -303,52 +304,53 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A lower body exercise that targets the quads, hamstrings, and glutes by stepping forward or backward into a lunge position.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/ugW5I-a5A-Q?si=_ovHNhpuNusO4bfr", // Replace with actual video ID
-          anatomyImage: lunges,
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl:
+          "https://www.youtube.com/embed/ugW5I-a5A-Q?si=_ovHNhpuNusO4bfr", // Replace with actual video ID
+        anatomyImage: lunges,
       },
       {
         name: "squat",
@@ -359,52 +361,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A fundamental lower body exercise targeting the quads, hamstrings, and glutes by lowering the body into a seated position and then standing back up.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
     ],
     image: Legs,
@@ -419,52 +421,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A compound exercise that targets the upper and lower back by rowing a barbell towards the torso while bent over.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "one arm row",
@@ -474,52 +476,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A unilateral back exercise performed by rowing a dumbbell towards the torso while bent over and supported by one arm.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "bent over row",
@@ -530,52 +532,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A back exercise where you bend at the waist and row the weight towards your lower chest.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
     ],
     image: Back,
@@ -591,52 +593,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "An isolation exercise that targets the biceps by curling the weight upwards towards the shoulders.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "triceps extension",
@@ -646,52 +648,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "An isolation exercise that targets the triceps by extending the arm overhead or behind the body.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "hammer curl",
@@ -701,52 +703,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A variation of the bicep curl that targets the biceps and forearms, performed with a neutral grip.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
     ],
     image: Arm,
@@ -761,52 +763,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A core exercise that targets the obliques by twisting the torso side to side while holding a weight.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "standing side bend",
@@ -816,52 +818,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "An exercise that targets the obliques by bending the torso side to side while holding a weight.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "weighted sit up with dumbbell",
@@ -871,52 +873,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A core exercise that targets the abs by performing a sit-up while holding a weight.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
     ],
     image: Abs,
@@ -932,52 +934,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "A compound exercise that targets the shoulder muscles by pressing the weight overhead.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-           videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "lateral raise",
@@ -987,52 +989,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "An isolation exercise that targets the lateral deltoids by lifting the weights out to the sides.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-           videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {
         name: "deltoid fly",
@@ -1042,52 +1044,52 @@ const exercises: { [key: string]: MuscleGroup } = {
         },
         description:
           "An isolation exercise that targets the rear deltoids by lifting the weights out to the sides while bent over.",
-          detailedDescription: [
-            {
-              title: "Steps:",
-              sections: [
-                {
-                  subtitle: "Setup:",
-                  items: [
-                    "Stand upright with feet hip-width apart.",
-                    "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
-                  ],
-                },
-                {
-                  subtitle: "Execution:",
-                  items: [
-                    "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
-                    "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
-                    "Push through the heel of your front foot to return to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Breathing:",
-                  items: [
-                    "Inhale as you step forward.",
-                    "Exhale as you push back to the starting position.",
-                  ],
-                },
-                {
-                  subtitle: "Repetition:",
-                  items: [
-                    "Repeat with the opposite leg.",
-                    "Perform the desired number of repetitions for each leg.",
-                  ],
-                },
-                {
-                  subtitle: "Tips:",
-                  items: [
-                    "Keep your torso upright and core engaged.",
-                    "Avoid letting your front knee go past your toes.",
-                    "Maintain a controlled movement to prevent injury.",
-                  ],
-                },
-              ],
-            },
-          ],
-          videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
-          anatomyImage: "/path/to/anatomy/chest.jpg",
+        detailedDescription: [
+          {
+            title: "Steps:",
+            sections: [
+              {
+                subtitle: "Setup:",
+                items: [
+                  "Stand upright with feet hip-width apart.",
+                  "Hold dumbbells at your sides or place a barbell across your shoulders (optional).",
+                ],
+              },
+              {
+                subtitle: "Execution:",
+                items: [
+                  "Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees.",
+                  "Ensure your front knee is directly above your ankle and your back knee hovers just above the ground.",
+                  "Push through the heel of your front foot to return to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Breathing:",
+                items: [
+                  "Inhale as you step forward.",
+                  "Exhale as you push back to the starting position.",
+                ],
+              },
+              {
+                subtitle: "Repetition:",
+                items: [
+                  "Repeat with the opposite leg.",
+                  "Perform the desired number of repetitions for each leg.",
+                ],
+              },
+              {
+                subtitle: "Tips:",
+                items: [
+                  "Keep your torso upright and core engaged.",
+                  "Avoid letting your front knee go past your toes.",
+                  "Maintain a controlled movement to prevent injury.",
+                ],
+              },
+            ],
+          },
+        ],
+        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        anatomyImage: "/path/to/anatomy/chest.jpg",
       },
     ],
     image: Shoulders,

@@ -22,7 +22,7 @@ import SwiperCore, { Pagination } from "swiper/modules";
 import exercises, { Exercise, MuscleGroup } from "./dumbbel";
 import Lottie from "lottie-react";
 import HomepageLottie from "../../assets/LottieFile/homepagelottie.json";
-import HomeImg from "../../assets/homeimg/homepageimg.svg";
+import HomeImg from "../../assets/personaltrainer.svg";
 const Homepage: React.FC = () => {
   const history = useHistory();
   const [userName, setUserName] = useState<string | null>("");
@@ -45,12 +45,12 @@ const Homepage: React.FC = () => {
           imageUrl:
             typeof exercise.imageUrl === "string"
               ? exercise.imageUrl
-              : exercise.imageUrl?.barbell || "", // Ensure imageUrl is defined
+              : exercise.imageUrl?.barbell || "", 
           equipment: exercise.equipment,
-          description: exercise.description || "", // Provide a default value for description
-          detailedDescription: exercise.detailedDescription || "", // Provide a default value for detailedDescription
-          videoUrl: exercise.videoUrl || "", // Provide a default value for videoUrl
-          anatomyImage: exercise.anatomyImage || "", // Provide a default value for anatomyImage
+          description: exercise.description || "", 
+          detailedDescription: exercise.detailedDescription || "", 
+          videoUrl: exercise.videoUrl || "", 
+          anatomyImage: exercise.anatomyImage || "", 
         });
       }
       if (exercise.equipment.includes("dumbbell")) {
@@ -59,12 +59,12 @@ const Homepage: React.FC = () => {
           imageUrl:
             typeof exercise.imageUrl === "string"
               ? exercise.imageUrl
-              : exercise.imageUrl?.dumbbell || "", // Ensure imageUrl is defined
+              : exercise.imageUrl?.dumbbell || "", 
           equipment: exercise.equipment,
-          description: exercise.description || "", // Provide a default value for description
-          detailedDescription: exercise.detailedDescription || "", // Provide a default value for detailedDescription
-          videoUrl: exercise.videoUrl || "", // Provide a default value for videoUrl
-          anatomyImage: exercise.anatomyImage || "", // Provide a default value for anatomyImage
+          description: exercise.description || "", 
+          detailedDescription: exercise.detailedDescription || "", 
+          videoUrl: exercise.videoUrl || "", 
+          anatomyImage: exercise.anatomyImage || "", 
         });
       }
     });
@@ -77,6 +77,7 @@ const Homepage: React.FC = () => {
     }
   }, []);
 
+
   return (
     <>
       <Sidebar />
@@ -84,7 +85,14 @@ const Homepage: React.FC = () => {
         <IonHeader className="ion-no-border shadow-none">
           <IonToolbar color="bg-primary" className="pt-8 text-primary">
             <div className="flex flex-cols justify-between items-center px-2">
-              <IonRow>Welcome, {userName}</IonRow>
+              <IonRow>
+                <IonText>
+                  <p className="text-sm">
+                    Welcome,{" "}
+                    <span className="text-sm font-bold">{userName}</span>
+                  </p>{" "}
+                </IonText>
+              </IonRow>
               <IonRow>
                 <IonIcon
                   icon={menuOutline}
@@ -102,19 +110,21 @@ const Homepage: React.FC = () => {
         </IonHeader>
         <IonContent>
           <IonGrid>
-            <IonRow className="bg-[#f6f3e6] py-6  rounded-md border-[1px] border-secondary">
+            <IonRow className="p-4">
               <IonCol size="8" className="mt-2">
-                <IonText className="text-2xl font-semibold">
-                  Start Your <br></br> Fitness Journey
+                <IonText className="text-2xl ">
+                  <p className="font-light">
+                    Start Your <br></br> Fitness{" "}
+                    <span className="font-bold"> Journey</span>
+                  </p>
                 </IonText>
               </IonCol>
               <IonCol size="4">
-                {/* <Lottie animationData={HomepageLottie} className="w-auto" /> */}
                 <IonImg src={HomeImg} className="w-30 h-30" />
               </IonCol>
             </IonRow>
             <IonRow>
-              <h1 className="text-dark font-bold text-sm px-2 mt-4">
+              <h1 className="text-dark font-bold text-sm px-2 mt-2">
                 Body parts
               </h1>
             </IonRow>
@@ -135,7 +145,7 @@ const Homepage: React.FC = () => {
                       <IonImg
                         src={group.imageUrl}
                         alt={group.name}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover "
                       />
                     </IonCard>
                     <div className="text-center">
@@ -149,7 +159,7 @@ const Homepage: React.FC = () => {
               ))}
             </IonRow>
 
-            <IonRow className="mt-4">
+            <IonRow className="mt-2">
               <IonCol size="9">
                 <h1 className="text-dark text-sm font-bold">Barbell</h1>
               </IonCol>
@@ -175,7 +185,7 @@ const Homepage: React.FC = () => {
                           ? exercise.imageUrl
                           : ""
                       }
-                      className="w-full h-40 object-cover rounded filter brightness-50"
+                      className="w-full h-40 object-cover rounded filter brightness-40"
                     />
                     <div className="absolute bottom-2 left-2 flex flex-col items-start text-left">
                       <IonText className="text-white text-lg">
@@ -197,7 +207,7 @@ const Homepage: React.FC = () => {
                 ))}
               </Swiper>
             </IonRow>
-            <IonRow className="mt-4">
+            <IonRow className="mt-2">
               <IonCol size="9">
                 <h1 className="text-dark text-sm font-bold">Dumbbell</h1>
               </IonCol>

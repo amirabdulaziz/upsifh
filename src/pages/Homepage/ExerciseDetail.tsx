@@ -1,12 +1,27 @@
-import React from 'react';
-import { RouteComponentProps } from 'react-router';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonIcon, IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/react';
-import { chevronBackOutline } from 'ionicons/icons';
-import exercises from './dumbbel'; // Adjust the import path based on your project structure
-import { useHistory } from 'react-router';
-import 'tailwindcss/tailwind.css';
+import React from "react";
+import { RouteComponentProps } from "react-router";
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonText,
+  IonIcon,
+  IonButton,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonRow,
+} from "@ionic/react";
+import { chevronBackOutline } from "ionicons/icons";
+import exercises from "./dumbbel"; // Adjust the import path based on your project structure
+import { useHistory } from "react-router";
+import "tailwindcss/tailwind.css";
 
-interface ExerciseDetailPageProps extends RouteComponentProps<{ name: string }> {}
+interface ExerciseDetailPageProps
+  extends RouteComponentProps<{ name: string }> {}
 
 const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
   const history = useHistory();
@@ -20,20 +35,32 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
   if (!exercise) {
     return (
       <IonPage>
-        <IonHeader>
+        <IonHeader className="ion-no-border border-b-[1px]">
           <IonToolbar>
-            <div className="flex justify-between items-center px-4 pt-6 pb-3">
-              <div className="flex items-center">
-                <IonButton fill="clear" onClick={() => history.goBack()}>
-                  <IonIcon icon={chevronBackOutline} slot="icon-only" />
-                </IonButton>
+            <div className="flex flex-row justify-between items-center px-4 pt-6 pb-3">
+              <div className="flex flex-row items-center">
+                <div className="w-[20px] h-[20px]">
+                  <a onClick={() => history.goBack()}>
+                    <IonIcon src={chevronBackOutline} className="w-6 h-6" />
+                  </a>
+                </div>
               </div>
-              <IonTitle>Exercise Not Found</IonTitle>
+              <div className="flex flex-row justify-center items-center flex-grow">
+                <a>
+                  <IonText className="text-lg font-bold">
+                    Excersize Not Found!
+                  </IonText>
+                </a>
+              </div>
             </div>
           </IonToolbar>
         </IonHeader>
-        <IonContent className="ion-padding">
-          <IonText>Sorry, we couldn't find the exercise you were looking for.</IonText>
+        <IonContent>
+          <IonRow className="justify-center items-center">
+            <IonText className="text-center ">
+              Sorry, we couldn't find the exercise you were looking for.
+            </IonText>
+          </IonRow>
         </IonContent>
       </IonPage>
     );
@@ -41,15 +68,21 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader className="ion-no-border border-b-[1px]">
         <IonToolbar>
-          <div className="flex justify-between items-center px-4 pt-6 pb-3">
-            <div className="flex items-center">
-              <IonButton fill="clear" onClick={() => history.goBack()}>
-                <IonIcon icon={chevronBackOutline} slot="icon-only" />
-              </IonButton>
+          <div className="flex flex-row justify-between items-center px-4 pt-6 pb-3">
+            <div className="flex flex-row items-center">
+              <div className="w-[20px] h-[20px]">
+                <a onClick={() => history.goBack()}>
+                  <IonIcon src={chevronBackOutline} className="w-6 h-6" />
+                </a>
+              </div>
             </div>
-            <IonTitle>{exercise.name}</IonTitle>
+            <div className="flex flex-row justify-center items-center flex-grow">
+              <a>
+                <IonText className="text-lg font-bold">{exercise.name}</IonText>
+              </a>
+            </div>
           </div>
         </IonToolbar>
       </IonHeader>
@@ -60,10 +93,18 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
           </IonCardHeader>
           <IonCardContent>
             <div className="mb-4">
-              {exercise.imageUrl && typeof exercise.imageUrl === 'object' && exercise.imageUrl.dumbbell && (
-                <img src={exercise.imageUrl.dumbbell} alt={exercise.name} className="w-full h-auto rounded-lg shadow-md mb-4" />
-              )}
-              <IonText className="text-xl font-semibold mb-4 block">{exercise.description}</IonText>
+              {exercise.imageUrl &&
+                typeof exercise.imageUrl === "object" &&
+                exercise.imageUrl.dumbbell && (
+                  <img
+                    src={exercise.imageUrl.dumbbell}
+                    alt={exercise.name}
+                    className="w-full h-auto rounded-lg shadow-md mb-4"
+                  />
+                )}
+              <IonText className="text-xl font-semibold mb-4 block">
+                {exercise.description}
+              </IonText>
             </div>
           </IonCardContent>
         </IonCard>
@@ -75,10 +116,14 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
             <IonCardContent>
               {detail.sections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="mb-2">
-                  <IonText className="text-md font-semibold mb-1 block">{section.subtitle}</IonText>
+                  <IonText className="text-md font-semibold mb-1 block">
+                    {section.subtitle}
+                  </IonText>
                   <ul className="list-disc list-inside pl-4">
                     {section.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="mb-1">{item}</li>
+                      <li key={itemIndex} className="mb-1">
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -108,7 +153,11 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
             <IonCardTitle>Targeted Muscles</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
-            <img src={exercise.anatomyImage} alt="Targeted Muscles" className="w-full h-auto rounded-lg shadow-md" />
+            <img
+              src={exercise.anatomyImage}
+              alt="Targeted Muscles"
+              className="w-full h-auto rounded-lg shadow-md"
+            />
           </IonCardContent>
         </IonCard>
       </IonContent>

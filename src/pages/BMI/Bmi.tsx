@@ -1,19 +1,20 @@
+import React, { useState } from "react";
 import {
   IonContent,
-  IonHeader,
   IonPage,
   IonCol,
-  IonTitle,
-  IonToolbar,
-  IonItem,
-  IonLabel,
-  IonInput,
-  IonButton,
   IonText,
+  IonGrid,
+  IonRow,
+  IonHeader,
+  IonToolbar,
+  IonIcon,
+  IonImg,
 } from "@ionic/react";
-import React, { useState } from "react";
-import "./Bmi.css"; // Importing custom CSS
 import Tabbar from "../../component/Tabbar";
+import Sidebar from "../../component/Sidebar";
+import { menuOutline } from "ionicons/icons";
+import HomeImg from "../../assets/homeimg/homepageimg.svg";
 
 const Bmi = () => {
   const [height, setHeight] = useState("");
@@ -27,6 +28,10 @@ const Bmi = () => {
     const bmiValue = weightInKg / (heightInMeters * heightInMeters);
     setBmi(bmiValue);
     categorizeBmi(bmiValue);
+
+    // Reset input fields
+    setHeight("");
+    setWeight("");
   };
 
   const categorizeBmi = (bmiValue: number) => {
@@ -41,61 +46,106 @@ const Bmi = () => {
     }
   };
 
+  const handleHeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setHeight(e.target.value);
+  };
+
+  const handleWeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setWeight(e.target.value);
+  };
+
   return (
-    <IonPage>
-      <IonHeader >
-        <IonToolbar >
-          <IonTitle>BMI Calculator</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent className="ion-padding">
-      <IonCol>
-              <IonText>
-                <h1 className="text-dark text-center">
-                  WELCOME TO UPSI FH: BMI Calculater
-                </h1>
-              </IonText>
+    <>
+      <Sidebar />
+      <IonPage id="sidebarmenu">
+        <IonHeader className="ion-no-border shadow-none">
+          <IonToolbar color="bg-primary" className="pt-8 text-primary">
+            <div className="flex flex-cols justify-between items-center px-2">
+              <div className="flex flex-row justify-center items-center flex-grow">
+                <a>
+                  <IonText className="text-lg font-bold">
+                    Body Mass Index Calculator
+                  </IonText>
+                </a>
+              </div>
+              <IonRow>
+                <IonIcon
+                  icon={menuOutline}
+                  className="h-10 w-6"
+                  onClick={() => {
+                    const menu = document.querySelector(
+                      'ion-menu[menu-id="first"]'
+                    ) as HTMLIonMenuElement;
+                    menu?.open();
+                  }}
+                ></IonIcon>
+              </IonRow>
+            </div>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent>
+          <IonGrid>
+            <IonRow className="p-4 flex justify-center pt-6">
+              <IonImg src={HomeImg} className="w-[240px] h-[240px]" />
+            </IonRow>
+            <IonCol className="flex flex-col justify-center items-center space-y-2">
+              {/* <IonRow className="w-full flex justify-center">
+                <IonText className="text-center text-4xl font-bold">
+                  Body Mass Index Calculator
+                </IonText>
+              </IonRow> */}
+              <IonRow className="w-full flex justify-center">
+                <IonText className="text-center text-sm">
+                  Track Your BMI!
+                </IonText>
+              </IonRow>
             </IonCol>
-        <form>
-          <IonItem>
-            <IonLabel position="stacked">Height (cm)</IonLabel>
-            <IonInput
-              type="number"  className="input-box"
-              value={height}
-              onIonChange={(e) => setHeight(e.detail.value!)}
-              required
-            />
-          </IonItem>
-          <IonItem>
-            <IonLabel position="stacked">Weight (kg)</IonLabel>
-            <IonInput
-              type="number"  className="input-box"
-              value={weight}
-              onIonChange={(e) => setWeight(e.detail.value!)}
-              required
-            />
-          </IonItem>
-          <IonButton
-            expand="block"
-            onClick={calculateBmi}
-            className="calculate-button"
-          >
-            Calculate BMI
-          </IonButton>
-        </form>
-        {bmi && (
-          <div className="bmi-result">
-            <IonText color="primary">
-              <h2>Your BMI: {bmi.toFixed(2)}</h2>
-            </IonText>
-            <IonText>
-              <h3>Category: {bmiCategory}</h3>
-            </IonText>
-          </div>
-        )}
-      </IonContent>
-      <Tabbar/>
-    </IonPage>
+            <IonRow className="px-2 space-y-2">
+              <label className="text-sm">Height (cm)</label>
+              <input
+                type="number"
+                className="focus:outline-none text-sm peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15]"
+                value={height}
+                onChange={handleHeightChange}
+                required
+              />
+
+              <label className="text-sm">Weight (kg)</label>
+              <input
+                type="number"
+                className="focus:outline-none text-sm peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15]"
+                value={weight}
+                onChange={handleWeightChange}
+                required
+              />
+
+              <button
+                onClick={calculateBmi}
+                className="text-sm text-tertiary font-semibold custom-button h-[40px] md:h-[50px] bg-[#D4C685] w-full justify-center items-center border rounded-lg shadow-lg mb-4"
+              >
+                Calculate BMI
+              </button>
+            </IonRow>
+            <IonRow className="p-2">
+              <div className="w-full mt-4 p-4 shadow-none border-[1px] border-secondary rounded-md">
+                <IonText className="text-sm font-semibold">
+                  <h2>
+                    Your BMI:{" "}
+                    {bmi && (
+                      <span className="text-secondary">{bmi.toFixed(2)}</span>
+                    )}
+                  </h2>
+                </IonText>
+                <IonText className="text-sm">
+                  <h3>Category: {bmi && <span>{bmiCategory}</span>}</h3>
+                </IonText>
+              </div>
+            </IonRow>
+          </IonGrid>
+        </IonContent>
+        <Tabbar />
+      </IonPage>
+    </>
   );
 };
 

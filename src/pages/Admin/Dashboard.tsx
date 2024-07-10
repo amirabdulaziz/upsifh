@@ -26,7 +26,7 @@ import {
   trashBinOutline,
   trashBinSharp,
 } from "ionicons/icons";
-import AdminSidebar from "../../component/AdminSidebar";
+import AdminSidebarblabla from "../../component/AdminSidebar";
 import {
   deleteFeedbackById,
   getFeedback,
@@ -138,8 +138,8 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <AdminSidebar />
-      <IonPage id="adminsidebarmenu">
+      <AdminSidebarblabla />
+      <IonPage id="adminsidebarmenublablabla">
         <IonHeader className="ion-no-border shadow-none">
           <IonToolbar color="bg-primary" className=" text-primary">
             <div className="flex flex-cols justify-between items-center px-2">

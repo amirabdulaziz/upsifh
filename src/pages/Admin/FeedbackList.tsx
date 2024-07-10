@@ -96,7 +96,7 @@ const FeedbackList: React.FC = () => {
     const getStatusIcon = (status: number) => {
       switch (status) {
         case 0: // Pending
-          return { icon: stopCircleSharp, color: "#ff0505" };
+          return { icon: stopCircleSharp, color: "#d4c685" };
         case 1: // Approved
           return { icon: checkmark, color: "#4BB543" };
         case 2: // Rejected

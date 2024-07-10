@@ -29,7 +29,7 @@ const AdminSidebar = () => {
   const handleSignOut = async () => {
     try {
       await signOutUser();
-      navigateAndCloseMenu("/adminlogin");
+      navigateAndCloseMenu("/homepage");
     } catch (error) {
       console.error("Error signing out:", error);
     }

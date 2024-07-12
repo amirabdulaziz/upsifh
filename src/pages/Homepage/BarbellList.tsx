@@ -1,4 +1,3 @@
-// BarbellExercisesList.tsx
 import React from "react";
 import exercises, { Exercise } from "./dumbbel"; // Adjust the import path based on your project structure
 import {
@@ -27,7 +26,7 @@ const BarbellExercisesList: React.FC = () => {
   );
 
   const handleCardClick = (exerciseName: string) => {
-    history.push(`/exercise/${exerciseName}`);
+    history.push(`/exercise/${exerciseName}/barbell`);
   };
 
   return (
@@ -55,7 +54,11 @@ const BarbellExercisesList: React.FC = () => {
       <IonContent>
         <IonRow className="p-2">
           {barbellExercises.map((exercise, index) => (
-            <IonCard key={index} className="shadow-sm" onClick={() => handleCardClick(exercise.name)}>
+            <IonCard
+              key={index}
+              className="shadow-sm"
+              onClick={() => handleCardClick(exercise.name)}
+            >
               <div>
                 {exercise.imageUrl &&
                   typeof exercise.imageUrl === "object" &&
@@ -66,7 +69,7 @@ const BarbellExercisesList: React.FC = () => {
                     />
                   )}
                 <div className="px-2 py-2 space-y-1">
-                  <h1 className="text-sm font-bold"> {exercise.name}</h1>
+                  <h1 className="text-sm font-bold">{exercise.name}</h1>
                   <p className="text-xs font-light">{exercise.description}</p>
                 </div>
               </div>

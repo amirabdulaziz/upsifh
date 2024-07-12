@@ -21,16 +21,16 @@ import { useHistory } from "react-router";
 import "tailwindcss/tailwind.css";
 
 interface ExerciseDetailPageProps
-  extends RouteComponentProps<{ name: string }> {}
+  extends RouteComponentProps<{ name: string; equipment: string }> {}
 
 const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
   const history = useHistory();
-  const exerciseName = match.params.name;
+  const { name, equipment } = match.params;
 
   // Find the exercise details based on the exercise name from the URL parameter
   const exercise = Object.values(exercises)
     .flatMap((group) => group.exercises)
-    .find((ex) => ex.name === exerciseName);
+    .find((ex) => ex.name === name);
 
   if (!exercise) {
     return (
@@ -48,7 +48,7 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
               <div className="flex flex-row justify-center items-center flex-grow">
                 <a>
                   <IonText className="text-lg font-bold">
-                    Excersize Not Found!
+                    Exercise Not Found!
                   </IonText>
                 </a>
               </div>
@@ -65,6 +65,8 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
       </IonPage>
     );
   }
+
+  const exerciseImageUrl = typeof exercise.imageUrl === 'object' ? exercise.imageUrl[equipment] : exercise.imageUrl;
 
   return (
     <IonPage>
@@ -93,15 +95,13 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
           </IonCardHeader>
           <IonCardContent>
             <div className="mb-4">
-              {exercise.imageUrl &&
-                typeof exercise.imageUrl === "object" &&
-                exercise.imageUrl.dumbbell && (
-                  <img
-                    src={exercise.imageUrl.dumbbell}
-                    alt={exercise.name}
-                    className="w-full h-auto rounded-lg shadow-md mb-4"
-                  />
-                )}
+              {exerciseImageUrl && (
+                <img
+                  src={exerciseImageUrl}
+                  alt={exercise.name}
+                  className="w-full h-auto rounded-lg shadow-md mb-4"
+                />
+              )}
               <IonText className="text-xl font-semibold mb-4 block">
                 {exercise.description}
               </IonText>

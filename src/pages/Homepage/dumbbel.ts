@@ -69,9 +69,10 @@ const exercises: { [key: string]: MuscleGroup } = {
     exercises: [
       {
         name: "bench press",
-        equipment: ["barbell"],
+        equipment: ["dumbbell", "barbell"],
         imageUrl: {
           barbell: BarbelBenchPress,
+          dumbbell: BarbelBenchPress,
         },
         description:
           "A compound exercise that targets the chest, shoulders, and triceps by pressing a barbell away from the chest while lying on a bench.",
@@ -175,7 +176,7 @@ const exercises: { [key: string]: MuscleGroup } = {
             ],
           },
         ],
-        videoUrl: "https://www.youtube.com/embed/videoid1", // Replace with actual video ID
+        videoUrl: "https://drive.google.com/file/d/1QJgRzYcSr7706gWQTAT8HFrcXPxzOp-M/preview", // Replace with actual video ID
         anatomyImage: "/path/to/anatomy/chest.jpg",
       },
       {

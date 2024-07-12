@@ -1,4 +1,3 @@
-// DumbellList.tsx
 import React from "react";
 import { IonCard, IonContent, IonHeader, IonIcon, IonImg, IonPage, IonRow, IonText, IonToolbar } from "@ionic/react";
 import { chevronBackOutline } from "ionicons/icons";
@@ -17,7 +16,7 @@ const DumbellList: React.FC = () => {
   );
 
   const handleCardClick = (exerciseName: string) => {
-    history.push(`/exercise/${exerciseName}`);
+    history.push(`/exercise/${exerciseName}/dumbbell`);
   };
 
   return (

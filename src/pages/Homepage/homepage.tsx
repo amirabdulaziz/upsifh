@@ -23,6 +23,7 @@ import exercises, { Exercise, MuscleGroup } from "./dumbbel";
 import Lottie from "lottie-react";
 import HomepageLottie from "../../assets/LottieFile/homepagelottie.json";
 import HomeImg from "../../assets/personaltrainer.svg";
+
 const Homepage: React.FC = () => {
   const history = useHistory();
   const [userName, setUserName] = useState<string | null>("");
@@ -76,7 +77,6 @@ const Homepage: React.FC = () => {
       setUserName(storedName);
     }
   }, []);
-
 
   return (
     <>
@@ -179,30 +179,34 @@ const Homepage: React.FC = () => {
               >
                 {barbellExercises.slice(0, 4).map((exercise, index) => (
                   <SwiperSlide key={index} className="rounded-md">
-                    <IonImg
-                      src={
-                        typeof exercise.imageUrl === "string"
-                          ? exercise.imageUrl
-                          : ""
-                      }
+                    <IonCard
                       className="w-full h-40 object-cover rounded filter brightness-40"
-                    />
-                    <div className="absolute bottom-2 left-2 flex flex-col items-start text-left">
-                      <IonText className="text-white text-lg">
-                        {exercise.name}
-                      </IonText>
-                      <IonText
-                        onClick={() => history.push("/")}
-                        className="flex items-center text-tertiary pb-1 text-xs mt-2"
-                      >
-                        <p className="mr-1 text-[10px]">View Details</p>
-                        <IonIcon
-                          icon={chevronForwardOutline}
-                          style={{ color: "#ffffff" }}
-                          className="h-4 w-4"
-                        />
-                      </IonText>
-                    </div>
+                      onClick={() => history.push(`/exercise/${exercise.name}/barbell`)}
+                    >
+                      <IonImg
+                        src={
+                          typeof exercise.imageUrl === "string"
+                            ? exercise.imageUrl
+                            : ""
+                        }
+                        className="w-full h-full rounded"
+                      />
+                      <div className="absolute bottom-2 left-2 flex flex-col items-start text-left">
+                        <IonText className="text-white text-lg">
+                          {exercise.name}
+                        </IonText>
+                        <IonText
+                          className="flex items-center text-tertiary pb-1 text-xs mt-2"
+                        >
+                          <p className="mr-1 text-[10px]">View Details</p>
+                          <IonIcon
+                            icon={chevronForwardOutline}
+                            style={{ color: "#ffffff" }}
+                            className="h-4 w-4"
+                          />
+                        </IonText>
+                      </div>
+                    </IonCard>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -222,7 +226,11 @@ const Homepage: React.FC = () => {
             </IonRow>
             <IonRow className="">
               {dumbbellExercises.slice(0, 4).map((exercise, index) => (
-                <IonCard key={index} className="w-full shadow-md relative">
+                <IonCard
+                  key={index}
+                  className="w-full shadow-md relative"
+                  onClick={() => history.push(`/exercise/${exercise.name}/dumbbell`)}
+                >
                   <IonImg
                     src={
                       typeof exercise.imageUrl === "string"
@@ -236,26 +244,26 @@ const Homepage: React.FC = () => {
                       {exercise.name}
                     </IonText>
                     <IonText
-                      onClick={() => history.push("/")}
-                      className="flex items-center text-tertiary pb-1 text-xs mt-2"
-                    >
-                      <p className="mr-1 text-[10px]">View Details</p>
-                      <IonIcon
-                        icon={chevronForwardOutline}
-                        style={{ color: "#ffffff" }}
-                        className="h-4 w-4"
-                      />
-                    </IonText>
-                  </div>
-                </IonCard>
-              ))}
-            </IonRow>
-          </IonGrid>
-        </IonContent>
-        <Tabbar />
-      </IonPage>
-    </>
-  );
+                  className="flex items-center text-tertiary pb-1 text-xs mt-2"
+                  >
+                    <p className="mr-1 text-[10px]">View Details</p>
+                    <IonIcon
+                      icon={chevronForwardOutline}
+                      style={{ color: "#ffffff" }}
+                      className="h-4 w-4"
+                    />
+                  </IonText>
+                </div>
+              </IonCard>
+            ))}
+          </IonRow>
+        </IonGrid>
+      </IonContent>
+      <Tabbar />
+    </IonPage>
+  </>
+);
 };
 
 export default Homepage;
+

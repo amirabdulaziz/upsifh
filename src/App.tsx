@@ -90,7 +90,7 @@ const App: React.FC = () => (
           </Route>
           <Route
             exact
-            path="/exercise/:name"
+            path="/exercise/:name/:equipment"
             render={(props) => <ExerciseDetail {...props} />}
           />
         </IonRouterOutlet>

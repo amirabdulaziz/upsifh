@@ -181,7 +181,9 @@ const Homepage: React.FC = () => {
                   <SwiperSlide key={index} className="rounded-md">
                     <IonCard
                       className="w-full h-40 object-cover rounded filter brightness-40"
-                      onClick={() => history.push(`/exercise/${exercise.name}/barbell`)}
+                      onClick={() =>
+                        history.push(`/exercise/${exercise.name}/barbell`)
+                      }
                     >
                       <IonImg
                         src={
@@ -189,15 +191,13 @@ const Homepage: React.FC = () => {
                             ? exercise.imageUrl
                             : ""
                         }
-                        className="w-full h-full rounded"
+                        className="w-full h-40 object-cover rounded filter brightness-50"
                       />
                       <div className="absolute bottom-2 left-2 flex flex-col items-start text-left">
                         <IonText className="text-white text-lg">
                           {exercise.name}
                         </IonText>
-                        <IonText
-                          className="flex items-center text-tertiary pb-1 text-xs mt-2"
-                        >
+                        <IonText className="flex items-center text-tertiary pb-1 text-xs mt-2">
                           <p className="mr-1 text-[10px]">View Details</p>
                           <IonIcon
                             icon={chevronForwardOutline}
@@ -229,7 +229,9 @@ const Homepage: React.FC = () => {
                 <IonCard
                   key={index}
                   className="w-full shadow-md relative"
-                  onClick={() => history.push(`/exercise/${exercise.name}/dumbbell`)}
+                  onClick={() =>
+                    history.push(`/exercise/${exercise.name}/dumbbell`)
+                  }
                 >
                   <IonImg
                     src={
@@ -243,26 +245,24 @@ const Homepage: React.FC = () => {
                     <IonText className="text-white text-lg">
                       {exercise.name}
                     </IonText>
-                    <IonText
-                  className="flex items-center text-tertiary pb-1 text-xs mt-2"
-                  >
-                    <p className="mr-1 text-[10px]">View Details</p>
-                    <IonIcon
-                      icon={chevronForwardOutline}
-                      style={{ color: "#ffffff" }}
-                      className="h-4 w-4"
-                    />
-                  </IonText>
-                </div>
-              </IonCard>
-            ))}
-          </IonRow>
-        </IonGrid>
-      </IonContent>
-      <Tabbar />
-    </IonPage>
-  </>
-);
+                    <IonText className="flex items-center text-tertiary pb-1 text-xs mt-2">
+                      <p className="mr-1 text-[10px]">View Details</p>
+                      <IonIcon
+                        icon={chevronForwardOutline}
+                        style={{ color: "#ffffff" }}
+                        className="h-4 w-4"
+                      />
+                    </IonText>
+                  </div>
+                </IonCard>
+              ))}
+            </IonRow>
+          </IonGrid>
+        </IonContent>
+        <Tabbar />
+      </IonPage>
+    </>
+  );
 };
 
 export default Homepage;

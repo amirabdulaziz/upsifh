@@ -57,6 +57,7 @@ const AddUser: React.FC = () => {
                 <button
                   type="submit"
                   color="none"
+                  disabled={!name}
                   className="text-sm text-tertiary font-semibold custom-button h-[40px] md:h-[50px] bg-[#D4C685] w-full rounded-lg shadow-lg mb-4"
                 >
                   Add your name

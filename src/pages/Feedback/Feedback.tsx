@@ -61,7 +61,7 @@ const Feedback = () => {
             <div className="flex flex-cols justify-between items-center px-2">
               <div className="flex flex-row justify-center items-center flex-grow">
                 <a>
-                  <IonText className="text-lg font-bold">
+                  <IonText className="text-lg font-bold text-tertiary">
                     Share Feedbacks
                   </IonText>
                 </a>
@@ -69,6 +69,7 @@ const Feedback = () => {
               <IonRow>
                 <IonIcon
                   icon={menuOutline}
+                  style={{ color: "white" }}
                   className="h-10 w-6"
                   onClick={() => {
                     const menu = document.querySelector(

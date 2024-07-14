@@ -95,7 +95,7 @@ const Homepage: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonIcon
-                color="#ffffff"
+                  style={{ color: "white" }}
                   icon={menuOutline}
                   className="h-10 w-6"
                   onClick={() => {

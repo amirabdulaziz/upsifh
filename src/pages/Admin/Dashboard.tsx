@@ -145,7 +145,7 @@ const Dashboard: React.FC = () => {
             <div className="flex flex-cols justify-between items-center px-2">
               <IonGrid>
                 <IonCol>
-                  <IonText>
+                  <IonText className="text-tertiary">
                     <h2 className="font-bold text-xl">Dashboard</h2>
                     <div className="flex flex-row items-center">
                       <p className="text-[10px] m-0 flex items-center">
@@ -157,6 +157,7 @@ const Dashboard: React.FC = () => {
               </IonGrid>
               <IonRow>
                 <IonIcon
+                  style={{ color: "white" }}
                   icon={menuOutline}
                   className="h-10 w-6"
                   onClick={() => {

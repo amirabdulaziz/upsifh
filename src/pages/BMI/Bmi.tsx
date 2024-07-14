@@ -63,13 +63,14 @@ const Bmi = () => {
             <div className="flex flex-cols justify-between items-center px-2">
               <div className="flex flex-row justify-center items-center flex-grow">
                 <a>
-                  <IonText className="text-lg font-bold">
+                  <IonText className="text-lg font-bold text-tertiary">
                     Body Mass Index Calculator
                   </IonText>
                 </a>
               </div>
               <IonRow>
                 <IonIcon
+                  style={{ color: "white" }}
                   icon={menuOutline}
                   className="h-10 w-6"
                   onClick={() => {
@@ -95,7 +96,7 @@ const Bmi = () => {
                 </IonText>
               </IonRow> */}
               <IonRow className="w-full flex justify-center">
-                <IonText className="text-center text-sm">
+                <IonText className="text-center text-sm text-tertiary">
                   Track Your BMI!
                 </IonText>
               </IonRow>

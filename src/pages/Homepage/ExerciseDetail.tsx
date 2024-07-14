@@ -77,6 +77,8 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
       ? exercise.imageUrl[equipment]
       : exercise.imageUrl;
 
+  console.log("Exercise Image URL:", exerciseImageUrl);
+
   return (
     <IonPage>
       <IonHeader className="ion-no-border border-b-[1px]">
@@ -107,6 +109,8 @@ const ExerciseDetail: React.FC<ExerciseDetailPageProps> = ({ match }) => {
                 className="w-full h-auto rounded-md"
               />
             )}
+
+            
 
             <div className="text-md font-bold mt-2">{exercise.name}</div>
             <IonText className="text-xs block">{exercise.description}</IonText>

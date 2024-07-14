@@ -39,7 +39,8 @@ const MuscleGroupPage: React.FC = () => {
   }, [group, equipment]);
 
   const handleCardClick = (exercise: Exercise) => {
-    history.push(`/exercise/${exercise.name}`);
+        history.push(`/exercise/${exercise.name}/${equipment}`);
+
   };
 
 

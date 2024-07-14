@@ -87,7 +87,7 @@ const Homepage: React.FC = () => {
             <div className="flex flex-cols justify-between items-center px-2">
               <IonRow>
                 <IonText>
-                  <p className="text-sm">
+                  <p className="text-sm text-tertiary">
                     Welcome,{" "}
                     <span className="text-sm font-bold">{userName}</span>
                   </p>{" "}
@@ -95,6 +95,7 @@ const Homepage: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonIcon
+                color="#ffffff"
                   icon={menuOutline}
                   className="h-10 w-6"
                   onClick={() => {
